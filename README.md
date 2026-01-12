@@ -39,7 +39,7 @@ Every member machine must allow external network requests. In PowerShell/Termina
 ```powershell
 $env:OLLAMA_HOST="0.0.0.0"
 ollama serve
-
+```
 ## 💻 Tech Stack
 
 ### Core Infrastructure
