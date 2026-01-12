@@ -21,9 +21,9 @@ This project is a local, distributed refactor of the **LLM Council** concept ins
 | Role | Machine Connection | Model Used | Note |
 | :--- | :--- | :--- | :--- |
 | **Chairman** | `127.0.0.1` (Local) | `phi3:mini` | Optimized for low VRAM stability |
-| **Member 1** | `Remote IP` | `phi3` | Council Node |
-| **Member 2** | `Remote IP` | `mistral` | Council Node |
-| **Member 3** | `Remote IP` | `phi3` | Council Node |
+| **Member 1** | `Remote IP` | `mistral` | Council Node |
+| **Member 2** | `Remote IP` | `phi3` | Council Node |
+| **Member 3** | `Remote IP` | `llama3` | Council Node |
 
 ---
 
