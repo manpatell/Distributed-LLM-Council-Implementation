@@ -58,3 +58,46 @@ ollama serve
 | **Orchestrator** | `SmolLM2` | 135M |
 | **Worker Node** | `Mistral` | 7B |
 | **Worker Node** | `Phi-3` | 3.8B |
+
+## 👥 Team Roles & Responsibilities
+
+To ensure efficient distributed development, our team of 5 divided the project tasks as follows:
+
+### 1. Lead Architect (The "Chairman")
+* **Focus:** Central Logic & Synthesis.
+* **Responsibilities:**
+    * Developed `final_council.py` (The main orchestrator).
+    * Implemented `stage3_chairman.py` (The synthesis logic).
+    * Managed the Chairman PC configuration and SLM (`smollm2`) integration.
+    * **Deliverable:** A fully integrated orchestration script.
+
+### 2. Network Engineer (The "Connector")
+* **Focus:** Infrastructure & Connectivity.
+* **Responsibilities:**
+    * Configured Static/Local IPs for all 4 machines.
+    * Managed `OLLAMA_HOST` variables and Firewall rules (Port 11434).
+    * maintained `network_config.py` to ensure accurate routing.
+    * **Deliverable:** Verified connectivity between all distributed nodes.
+
+### 3. Backend Developer (The "Council")
+* **Focus:** Worker Node Logic (Stages 1 & 2).
+* **Responsibilities:**
+    * Developed `stage1_opinions.py` for parallel asynchronous requests.
+    * Developed `stage2_review.py` for anonymization and peer-review prompts.
+    * Optimized prompts to ensure consistent JSON/Text outputs from models.
+    * **Deliverable:** Functional opinion generation and review cycles.
+
+### 4. QA & Reliability Engineer (The "Fixer")
+* **Focus:** Error Handling & Stability.
+* **Responsibilities:**
+    * Implemented "Defensive Programming" checks (e.g., handling `NoneType` responses).
+    * Stress-tested the system against network timeouts and memory limits.
+    * **Deliverable:** A crash-resistant application with robust error logging.
+
+### 5. Product Owner & Documentation Lead
+* **Focus:** Presentation & Reporting.
+* **Responsibilities:**
+    * Authored the `README.md` and **Technical Report**.
+    * Drafted the "Generative AI Usage Statement" for compliance.
+    * **Live Demo Lead:** Narrates the council workflow during the professor's presentation.
+    * **Deliverable:** Comprehensive project documentation and submission files.
