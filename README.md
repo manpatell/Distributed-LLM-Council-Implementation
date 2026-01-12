@@ -99,5 +99,5 @@ To ensure efficient distributed development, our team of 5 divided the project t
 * **Responsibilities:**
     * Authored the `README.md` and **Technical Report**.
     * Drafted the "Generative AI Usage Statement" for compliance.
-    * **Live Demo Lead:** Narrates the council workflow during the professor's presentation.
+    * **Live Demo Lead:** Narrates the council workflow presentation.
     * **Deliverable:** Comprehensive project documentation and submission files.
