@@ -29,17 +29,11 @@ This project is a local, distributed refactor of the **LLM Council** concept ins
 
 ## 🛠️ Setup & Installation
 
-### 1. Prerequisites
+### Prerequisites
 * **Ollama:** Installed on all machines ([ollama.com](https://ollama.com)).
 * **Python 3.10+:** Installed on the Chairman PC.
 * **Network:** All machines must be connected to the same local Wi-Fi.
 
-### 2. Council Member Configuration
-Every member machine must allow external network requests. In PowerShell/Terminal, run:
-```powershell
-$env:OLLAMA_HOST="0.0.0.0"
-ollama serve
-```
 ## 🚀 How to Run the Project
 
 Follow these steps in order to launch the distributed council.
