@@ -39,3 +39,22 @@ Every member machine must allow external network requests. In PowerShell/Termina
 ```powershell
 $env:OLLAMA_HOST="0.0.0.0"
 ollama serve
+
+## 💻 Tech Stack
+
+### Core Infrastructure
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-Local_Inference-000000?style=for-the-badge&logo=ollama&logoColor=white)
+![AsyncIO](https://img.shields.io/badge/AsyncIO-Concurrency-red?style=for-the-badge)
+
+### Libraries & Protocols
+![HTTPX](https://img.shields.io/badge/HTTPX-Async_Requests-blue?style=for-the-badge)
+![REST API](https://img.shields.io/badge/REST_API-Communication-green?style=for-the-badge)
+![JSON](https://img.shields.io/badge/JSON-Data_Interchange-orange?style=for-the-badge)
+
+### AI Models Utilized
+| Role | Model | Size |
+| :--- | :--- | :--- |
+| **Orchestrator** | `SmolLM2` | 135M |
+| **Worker Node** | `Mistral` | 7B |
+| **Worker Node** | `Phi-3` | 3.8B |
