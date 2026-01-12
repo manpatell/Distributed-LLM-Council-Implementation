@@ -40,6 +40,52 @@ Every member machine must allow external network requests. In PowerShell/Termina
 $env:OLLAMA_HOST="0.0.0.0"
 ollama serve
 ```
+## 🚀 How to Run the Project
+
+Follow these steps in order to launch the distributed council.
+
+### Step 1: Network Configuration
+1.  Open `network_config.py` on the **Chairman PC**.
+2.  Ask your team members for their current **IPv4 Addresses** (run `ipconfig` on Windows or `ifconfig` on Mac/Linux).
+3.  Update the file with their specific IPs:
+    ```python
+    COUNCIL_MEMBERS = [
+        {"name": "Member_1", "ip": "[http://192.168.1.10:11434](http://192.168.1.10:11434)", "model": "phi3"},
+        {"name": "Member_2", "ip": "[http://192.168.1.11:11434](http://192.168.1.11:11434)", "model": "mistral"},
+        {"name": "Member_3", "ip": "[http://192.168.1.12:11434](http://192.168.1.12:11434)", "model": "phi3"}
+    ]
+    ```
+
+### Step 2: Prepare the Council Members (Worker Nodes)
+**On each of the 3 Member PCs:**
+1.  Open a terminal (PowerShell or Bash).
+2.  Set the environment variable to allow external connections and start the server:
+    ```powershell
+    # Windows PowerShell
+    $env:OLLAMA_HOST="0.0.0.0"
+    ollama serve
+    ```
+    *(Mac/Linux: `OLLAMA_HOST=0.0.0.0 ollama serve`)*
+3.  **Keep this terminal open.** You should see "Listening on 0.0.0.0:11434".
+
+### Step 3: Execute the Council
+**On the Chairman PC:**
+1.  Run the main script:
+    ```bash
+    python final_council.py
+    ```
+2.  Enter your query when prompted (e.g., *"What are the ethical implications of AI in healthcare?"*).
+3.  Watch the logs as the system:
+    * 📡 **Stage 1:** Dispatches the query to all 3 member IPs.
+    * ⚖️ **Stage 2:** Anonymizes answers and gathers peer reviews.
+    * 👑 **Stage 3:** Synthesizes the final "Golden Answer" locally.
+
+---
+
+### ⚠️ Troubleshooting
+* **Connection Refused?** Ensure the Member PCs have disabled their Firewall for port `11434` and are on the **Private** network profile.
+* **Chairman 500 Error?** If the Chairman crashes, ensure you are using `smollm2:135m` or `qwen:2b` in `network_config.py`, as larger models (Llama3) may exceed available RAM.
+
 ## 💻 Tech Stack
 
 ### Core Infrastructure
